@@ -2,8 +2,8 @@
 body input{
     width: 80%;
 }
-body h1{
-    width: 99%;
+body h1,body .ps{
+    width: 90%;
 
 }
 }
@@ -13,7 +13,7 @@ body{
     margin: 0;
     font-family: "Roboto";
     color: #fff;
-    height: 6000px;
+height: 1000px;
  
 }
 
@@ -78,8 +78,48 @@ background:  rgb(63, 128, 60);
  }
 span{
     display: inline-block;
+   
     min-width: 12px;
-    
   
-    transition: all 0.5s;
+    transition: all 1s;
+}
+
+
+.psev{
+    top: 200px;
+    border:1px solid black; 
+
+
+}
+
+.g{
+    position: relative;
+    top: 200px;
+  
+}
+
+.ps span{
+    display: inline-block;
+    position: relative;
+   
+
+}
+.ps{
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    line-height: 0;
+    
+}
+
+.ss{
+    transform: translateY(100px);
+    transition: all 1s;
+    opacity: 1;
+   
+}
+
+.sss{
+    transform: translateY(-100px);
+    opacity: 0;
 }
