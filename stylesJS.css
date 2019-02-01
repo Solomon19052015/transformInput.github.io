@@ -1,125 +1,113 @@
-@media(max-width:800px){
-body input{
-    width: 80%;
-}
-body h1,body .ps{
-    width: 90%;
-
-}
-}
 
 body{
     padding: 0;
     margin: 0;
     font-family: "Roboto";
     color: #fff;
-height: 1000px;
+   background: #000;
  
 }
 
- h1{
-    position: relative;
-    height: 100px;
-    top: 50px;
-     color: rgb(77, 77, 77);
-    text-align: left;
-   width: 50%;
-   margin: 0 auto;
-    font-size: 40px;
-    font-weight: 600;
+:root{
+    --main-posX: 10%;
+    --main-posY: 10%;
+}
+
+
+
+.container{
     
- }
-.us{
-    position: relative;
-    top: 200px;
-}
- input{
-     position: relative;
-    font-size: 20px;
-     margin: 0 auto;
-     width: 50%;
-     height: 50px;
-     display: block;
-     padding: 5px 20px
-
- }
-
- .go{
-     display: block;
-     margin: 10px auto;
-     width: 300px;
-     height: 50px;
-     position: relative;
-     background: rgb(80, 161, 77);
-     border: none;
-     border-radius: 50px;
-     color: #fff;
-     font-size: 18px;
-     transition: all 0.5s;
-
- }
-
-.go:hover{
-background:  rgb(63, 128, 60);
-}
-
- .word{
-     opacity: 0;
- }
-
- .sym{
-    transform:rotateY(180deg) translateY(150px);
-    opacity: 0;
- }
-
- .symm{
-    transform:rotateY(0deg) translateY(0px);
-    opacity: 1;
- }
-span{
-    display: inline-block;
-   
-    min-width: 12px;
-  
-    transition: all 1s;
-}
-
-
-.psev{
-    top: 200px;
-    border:1px solid black; 
-
-
-}
-
-.g{
-    position: relative;
-    top: 200px;
-  
-}
-
-.ps span{
-    display: inline-block;
-    position: relative;
-   
-
-}
-.ps{
-    width: 50%;
-    height: 40px;
-    font-size: 20px;
-    line-height: 0;
     
 }
 
-.ss{
-    transform: translateY(100px);
-    transition: all 1s;
-    opacity: 1;
+.primer{
+    height: 100vh;
+    width: 100%;
+        margin: 0px auto;
+    display: flex;
+    flex-flow: column nowrap;
+     overflow: hidden;
+      background:  url(fon_2.jpg) no-repeat;
+    background-size: 205%;
+    background-position: bottom;
+    position: relative;
+    transition: all 15s ease;
+    box-sizing: border-box;
+    
    
+ 
+
+}
+.primer:hover{
+   /* background-size: 100%;  */
+ background-position-x: var(--main-posX);
+ background-position-y: var(--main-posY);
+ 
+
 }
 
-.sss{
-    transform: translateY(-100px);
+.primer h1{
+    text-align: center;
+    transition: all 0.6s ease;
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top:0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    transform: scaleY(1);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   transform-origin: bottom;
+    /* transition-delay: 0.1s; */
+    z-index: 2;
+
+}
+
+.primer .showPrimer h3,p,ul, li{
+    padding: 0;
+    margin: 0;
+}
+.primer .showPrimer h3{
+    font-size: 26px;
+}
+.primer .showPrimer{
+ 
+    height: 100%;
+    width: 100%;
+    padding: 5%;
+    margin: 0 auto;
+    transition: all 0.6s  cubic-bezier(0.175, 0.885, 0.32, 1);
+    z-index: 0;
     opacity: 0;
+    box-sizing: border-box;
+  transform: scaleY(10) ;
+     background: rgba(0, 0, 0, 0.418);
+     transform-origin: center;
+
+
+}
+.primer .showPrimer a{
+    color: #eaeaea;
+}
+.primer:hover .showPrimer{
+    left: 0;
+    opacity: 1;
+    z-index: 6;
+    transform: scaleY(1);
+   
+   
+    
+}
+.primer:hover h1{
+   opacity: 0;
+    z-index: 1;
+    transform: scaleY(0);
+
+}
+.primer .showPrimer a:hover{
+    color: rgb(238, 113, 113);
 }
