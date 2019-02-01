@@ -3,6 +3,10 @@
     body .primer{
         background-size: cover;
     }
+    body .primer h1, body .primer .showPrimer{
+        transition: all 0.4s;
+    }
+
 }
 
 body{
@@ -22,7 +26,7 @@ body{
 
 
 .container{
-    
+    min-width: 400px
     
 }
 
@@ -59,6 +63,7 @@ body{
     transition: all 0.6s ease;
     opacity: 1;
     position: absolute;
+    padding: 0;
     left: 0;
     top:0;
     right: 0;
@@ -83,6 +88,7 @@ body{
 }
 .primer .showPrimer h3{
     font-size: 26px;
+  
 }
 .primer .showPrimer{
  
@@ -105,6 +111,7 @@ body{
 .showCont{
 width: 70%;
 height: 300px;
+padding: 0;
 margin: 0 auto;
 
 }
