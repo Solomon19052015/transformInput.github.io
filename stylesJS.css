@@ -1,4 +1,10 @@
 
+@media(max-width: 800px){
+    body .primer{
+        background-size: cover;
+    }
+}
+
 body{
     padding: 0;
     margin: 0;
