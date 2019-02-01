@@ -28,12 +28,12 @@ body{
     flex-flow: column nowrap;
      overflow: hidden;
       background:  url(fon_2.jpg) no-repeat;
-    background-size: 205%;
- /*    background-position: bottom; */
- background-position-x: var(--main-posX);
- background-position-y: var(--main-posY);
+    background-size: 110%;
+    background-position: center; 
+/*  background-position-x: var(--main-posX);
+ background-position-y: var(--main-posY); */
     position: relative;
-    transition: all 15s ease;
+    transition: all 5s cubic-bezier(0.275, 0.82, 0.0165, 1);
     box-sizing: border-box;
     
    
@@ -66,6 +66,8 @@ body{
    transform-origin: bottom;
     /* transition-delay: 0.1s; */
     z-index: 2;
+    font-size: 80px;
+    font-weight: 100;
 
 }
 
@@ -88,13 +90,32 @@ body{
     box-sizing: border-box;
   transform: scaleY(10) ;
      background: rgba(0, 0, 0, 0.418);
-     transform-origin: center;
+     transform-origin: bottom;
+     display: flex;
+     align-items: center
 
 
 }
+.showCont{
+width: 70%;
+height: 300px;
+margin: 0 auto;
+
+}
+.showCont p{
+    font-weight: 600;
+    font-size: 54px;
+}
+.showCont a{
+    font-weight: 100;
+    font-size: 40px;
+}
+
 .primer .showPrimer a{
     color: #eaeaea;
+ text-decoration: none;
 }
+
 .primer:hover .showPrimer{
     left: 0;
     opacity: 1;

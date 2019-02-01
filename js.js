@@ -29,10 +29,10 @@ function numbProc(x,y){
 function comparison(x){
     let result = 0;
   if(x > 50){
-   return result = 100;
+   return result = 60;
   }
   else{
-     return result = 0
+     return result = 40
   }
   
 }
