@@ -29,7 +29,7 @@ body{
      overflow: hidden;
       background:  url(fon_2.jpg) no-repeat;
     background-size: 205%;
-    background-position: bottom;
+ /*    background-position: bottom; */
     position: relative;
     transition: all 15s ease;
     box-sizing: border-box;
