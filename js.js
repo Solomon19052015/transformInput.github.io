@@ -10,9 +10,8 @@ function moveMouse(e){
     let funcPreobr = numbProc(x,y);
      let a = Math.round(funcPreobr[0]) ;
     let b = Math.round(funcPreobr[1]) ;
-    h.innerHTML = a + "     " + b;
-   let comparX =  comparison(a);
-   let comparY =  comparison(b);
+    let comparX =  comparisonX(a);
+   let comparY =  comparisonY(b);
   
  mainPos.style.setProperty('--main-posX', comparX + "%");
  mainPos.style.setProperty('--main-posY', comparY + "%");
@@ -20,19 +19,30 @@ function moveMouse(e){
 }
 
 function numbProc(x,y){
-    let xP = (x * 100)/1350; 
-    let yP = (y * 100)/580; 
+    let xP = (x * 100)/window.innerWidth; 
+    let yP = (y * 100)/window.innerHeight; 
     let arr = [xP,yP];
     return arr;
 }
 
-function comparison(x){
+function comparisonX(x){
     let result = 0;
   if(x > 50){
-   return result = 60;
+   return result = 70;
   }
   else{
-     return result = 40
+     return result = 30
+  }
+  
+}
+
+function comparisonY(x){
+    let result = 0;
+  if(x > 50){
+   return result = 55;
+  }
+  else{
+     return result = 45
   }
   
 }
