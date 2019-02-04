@@ -1,59 +1,68 @@
-document.body.onload = function(){
-
-           
-setTimeout(function(){
+document.body.onload = function() {
+  setTimeout(function() {
     let load = document.querySelector(".load");
     let kv = document.querySelector(".kv");
     load.classList.add("closeLoad");
     kv.classList.add("kvClose");
-},1500)
-    
-let primer = document.querySelector(".primer");
-let h = document.querySelector("h3");
-let mainPos = document.querySelector(":root");
+  }, 1500);
 
-primer.addEventListener("mousemove", moveMouse);
+  let primer = document.querySelector(".primer");
+  let h = document.querySelector("h3");
+  let mainPos = document.querySelector(":root");
 
-function moveMouse(e){
+  primer.addEventListener("mousemove", moveMouse);
+
+  function moveMouse(e) {
     let x = e.clientX;
     let y = e.clientY;
-    let funcPreobr = numbProc(x,y);
-     let a = Math.round(funcPreobr[0]) ;
-    let b = Math.round(funcPreobr[1]) ;
-    let comparX =  comparisonX(a);
-   let comparY =  comparisonY(b);
-  
- mainPos.style.setProperty('--main-posX', comparX + "%");
- mainPos.style.setProperty('--main-posY', comparY + "%");
+    let funcPreobr = numbProc(x, y);
+    let a = Math.round(funcPreobr[0] * 1.1);
+    let b = Math.round(funcPreobr[1] * 1.1);
+    let comparX = comparisonX(a);
+    let comparY = comparisonY(b);
+    /*    h.innerHTML = a + " , " + b;  */
+    mainPos.style.setProperty("--main-posX", comparX + "%");
+    mainPos.style.setProperty("--main-posY", comparY + "%");
+  }
 
-}
-
-function numbProc(x,y){
-    let xP = (x * 100)/window.innerWidth; 
-    let yP = (y * 100)/window.innerHeight; 
-    let arr = [xP,yP];
+  function numbProc(x, y) {
+    let xP = (x * 100) / window.innerWidth;
+    let yP = (y * 100) / window.innerHeight;
+    let arr = [xP, yP];
     return arr;
-}
+  }
 
-function comparisonX(x){
+  function comparisonX(x) {
     let result = 0;
-  if(x > 50){
-   return result = 70;
-  }
-  else{
-     return result = 30
-  }
+    if (x > 0 && x <= 25) {
+        return (result = 15);
+      } 
+    if (x > 25 && x <= 50) {
+        return (result = 40);
+      } 
+    if (x > 50 && x <= 75) {
+      return (result = 70);
+    }
+    if (x >= 75) {
+      return (result = 85);
+    }
   
-}
+  }
 
-function comparisonY(x){
+  function comparisonY(x) {
     let result = 0;
-  if(x > 50){
-   return result = 55;
+
+    if (x > 0 && x <= 25) {
+      return (result = 20);
+    } 
+    if (x > 25 && x <=50) {
+      return (result = 40);
+    } 
+    if(x > 50 && x <=75) {
+      return (result = 60);
+    }
+    if(x>75){
+        return (result = 80);
+    }
   }
-  else{
-     return result = 45
-  }
-  
-}
 };

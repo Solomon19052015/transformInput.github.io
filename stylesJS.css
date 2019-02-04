@@ -1,221 +1,243 @@
-
-@media(max-width: 800px){
-    body .primer{
-        background-size: cover;
-    }
-    body .primer h1, body .primer .showPrimer{
-        transition: all 0.4s;
-    }
-    body .showCont{
-        width: 95%;
-      
-    }
-    body .showPrimer .showCont h3{
-        font-size: 30px;
-    }
-    body .showPrimer p{
-        font-size: 44px;
-    }
-
+@media (max-width: 800px) {
+  body .Bg {
+    background-size: cover;
+  }
+  body .primer h1,
+  body .primer .showPrimer {
+    transition: all 0.4s;
+  }
+  body .showCont {
+    width: 95%;
+  }
+  body .showPrimer .showCont h3 {
+    font-size: 30px;
+  }
+  body .showPrimer p {
+    font-size: 44px;
+  }
 }
 
-body{
-    padding: 0;
-    margin: 0;
-    font-family: "Roboto";
-    color: #fff;
-   background: #000;
- 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Muller Narrow";
+  color: #fff;
+  background: #000;
 }
 
-:root{
-    --main-posX: 10%;
-    --main-posY: 10%;
+:root {
+  --main-posX: 10%;
+  --main-posY: 10%;
 }
 
-
-
-.container{
-    min-width: 360px
-    
+.container {
+  min-width: 360px;
 }
 
+.container .Bg {
+ position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: url(mountains.jpg) no-repeat;
+  background-size: 110%;
+  background-position: center;
+   transition: all 4s cubic-bezier(0.2, 0.2, 0.2, 1);
+  box-sizing: border-box;
+  background-position-x: var(--main-posX);
+  background-position-y: var(--main-posY);
+  z-index: 9;
+  filter: brightness(0.6);
+  top:0
+}
 .primer{
+    position: relative;
     height: 100vh;
     width: 100%;
-        margin: 0px auto;
     display: flex;
-    flex-flow: column nowrap;
-     overflow: hidden;
-      background:  url(fon_2.jpg) no-repeat;
-    background-size: 110%;
-    background-position: center; 
-    position: relative;
-    transition: all 5s cubic-bezier(0.275, 0.82, 0.0165, 1);
-    box-sizing: border-box;
-    
-   
- 
-
-}
-.primer:hover{
-   /* background-size: 100%;  */
- background-position-x: var(--main-posX);
- background-position-y: var(--main-posY);
- 
-
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  z-index: 10;
+  top:0;
 }
 
-.primer h1{
-    text-align: center;
-    transition: all 0.6s ease;
-    opacity: 1;
-    position: absolute;
-    padding: 0;
-    left: 0;
-    top:0;
-    right: 0;
-    bottom: 0;
-    height: auto;
-    transform: scaleY(1);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   transform-origin: bottom;
-    /* transition-delay: 0.1s; */
-    z-index: 2;
-    font-size: 80px;
-    font-weight: 100;
 
+.primer .sect1_cont h3,p {
+  padding: 0;
+  margin: 0;
 }
-
-.primer .showPrimer h3,p,ul, li{
-    padding: 0;
-    margin: 0;
+.primer .sect1_cont h3 {
+  font-size: 26px;
 }
-.primer .showPrimer h3{
-    font-size: 26px;
-  
+.primer .sect1_cont {
+  height: 80%;
+  width: 70%;
+  margin: 0 auto;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  flex-flow:column nowrap;
 }
-.primer .showPrimer{
- 
-    height: 100%;
-    width: 100%;
-    padding: 5%;
-    margin: 0 auto;
-    transition: all 0.6s  cubic-bezier(0.175, 0.885, 0.32, 1);
-    z-index: 0;
-    opacity: 0;
-    box-sizing: border-box;
-  transform: scaleY(10) ;
-     background: rgba(0, 0, 0, 0.418);
-     transform-origin: bottom;
-     display: flex;
-     align-items: center
-
-
-}
-.showCont{
-width: 70%;
-height: 300px;
-padding: 0;
-margin: 0 auto;
-
-}
-.showCont p{
+.sect1_cont h1{
+    font-size: 50px;
     font-weight: 600;
-    font-size: 54px;
-}
-.showCont a{
-    font-weight: 100;
-    font-size: 40px;
-}
-
-.primer .showPrimer a{
-    color: #eaeaea;
- text-decoration: none;
-}
-
-.primer:hover .showPrimer{
-    left: 0;
-    opacity: 1;
-    z-index: 6;
-    transform: scaleY(1);
+    width: 50%;
+    min-width: 550px;
    
-   
-    
-}
-.primer:hover h1{
-   opacity: 0;
-    z-index: 1;
-    transform: scaleY(0);
-
-}
-.primer .showPrimer a:hover{
-    color: rgb(238, 113, 113);
 }
 
-.load{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 99;
-     transition: all 0.8s ease;
-     background: #000;
+.buttomChange{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    animation: loadB 0.8s ease 0.1s infinite alternate-reverse;
-    animation-fill-mode: forwards;
-    transform-origin: center;
+    width: 70%;
+    margin: 0 auto;
+    min-width: 550px;
 }
 
-.closeLoad{
-    z-index: 0;
-    background: rgba(0, 0, 0, 0);
-    opacity: 0;
-}
-.kv{
-    width: 40px;
-    height: 40px;
+.buttomChange .myStory,.myWorks{
     position: relative;
-      margin: 0 auto;
-     box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.342);
-    z-index: 101;
-    background: #fff;
-     transform: translateX(0px) rotate(0deg); 
-    animation: kvAfter 1s cubic-bezier(1,1,1,1) 0s infinite alternate;
-    animation-fill-mode: backwards;
-    transform-origin: center;
+      width: 45%;
+    height: 180px;
+  
+}
+.bgMyStory,.bgMyWorks{
+    position: absolute;
+    top: 0;
+    background: rgba(105, 57, 57, 0.384);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    filter: blur(6px);
+}
 
-    
-}
-.kvClose{
-    opacity: 0;
-    z-index: 0;
-}
- 
+.buttomChange .myStory .linkMyStory,.buttomChange .myWorks a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+     font-size: 22px;
+     text-decoration: none;
+   z-index: 2;
+   color: rgba(240, 240, 240, 0.89);
+   font-weight: 600;
+  
+
    
 
-@keyframes kvAfter{
-    0%{
-       transform: translate(-100px) rotate(0deg)  ;
-                
-    }
-  
-    25%{
-        transform: translate(-50px) rotate(90deg)  ;
-           
-    }
-    50%{
-        transform: translate(0px) rotate(180deg)  ;
-    }
-    75%{
-        transform: translate(50px) rotate(270deg)  ;
-    }
-  
-    100%{
-        transform:  translate(100px)  rotate(360deg) ;
-          }
 }
 
+.linkMyStory:hover {
+   
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ПРЕДЛОАДЕР */
+
+.load {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 99;
+  transition: all 0.8s ease;
+  background: #000;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  animation: loadB 0.8s ease 0.1s infinite alternate-reverse;
+  animation-fill-mode: forwards;
+  transform-origin: center;
+  
+}
+
+.load h1{
+    font-size: 44px;
+    font-weight: 100;
+    text-align: center;
+   width: 50%;
+    padding: 20px;
+    border-radius: 2px;
+    position: relative;
+    color: rgb(219, 219, 219);
+   
+               
+
+}
+.load h1::before{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background: transparent;
+    box-shadow: 0px -8px 5px 1px #fff ;
+}
+.load h1 span{
+ font-size: 50px;
+ color: #fff;
+}
+
+.closeLoad {
+  z-index: 0;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+}
+.kv {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.342);
+  z-index: 101;
+  background: #fff;
+  transform: translateX(0px) rotate(0deg);
+  animation: kvAfter 1s cubic-bezier(1, 1, 1, 1) 0s infinite alternate;
+  animation-fill-mode: backwards;
+  transform-origin: center;
+}
+.kvClose {
+  opacity: 0;
+  z-index: 0;
+}
+
+@keyframes kvAfter {
+  0% {
+    transform: translate(-100px) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-50px) rotate(90deg);
+  }
+  50% {
+    transform: translate(0px) rotate(180deg);
+  }
+  75% {
+    transform: translate(50px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(100px) rotate(360deg);
+  }
+}
