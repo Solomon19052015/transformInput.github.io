@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face{
+    font-family: 'Muller Narrow';
+    src: url('fonts/MullerNarrow-ExtraBold.ttf')
+}
+
+
 @media (max-width: 800px) {
   body .Bg {
     background-size: cover;
@@ -28,11 +35,31 @@ body {
 :root {
   --main-posX: 10%;
   --main-posY: 10%;
+  --colorBorder: rgba(255, 255, 255, 0.815);
 }
 
 .container {
   min-width: 360px;
+    z-index: 9;
+    position: absolute;
+    
 }
+
+.container2{
+    z-index: 11;
+    position: absolute;
+
+background-size: contain;
+    height: 100vh;
+    width: 100%;
+}
+
+.container2 h1{
+    padding: 0;
+    margin: 0;
+  
+}
+
 
 .container .Bg {
  position: absolute;
@@ -68,9 +95,7 @@ body {
   padding: 0;
   margin: 0;
 }
-.primer .sect1_cont h3 {
-  font-size: 26px;
-}
+
 .primer .sect1_cont {
   height: 80%;
   width: 70%;
@@ -83,59 +108,217 @@ body {
   flex-flow:column nowrap;
 }
 .sect1_cont h1{
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 600;
-    width: 50%;
+    width: 90%;
     min-width: 550px;
    
+}
+.sect1_cont h1 span{
+font-size: 70px;
 }
 
 .buttomChange{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 0 auto;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 90%;
+    margin: 30px  auto 0;
     min-width: 550px;
+    height: 400px;
 }
 
-.buttomChange .myStory,.myWorks{
+ .myStory,.myWorks{
     position: relative;
-      width: 45%;
-    height: 180px;
-  
-}
-.bgMyStory,.bgMyWorks{
-    position: absolute;
-    top: 0;
-    background: rgba(105, 57, 57, 0.384);
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    filter: blur(6px);
+    width: 300px;
+    height: 100px;
+    font-weight: 600;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: rgba(66, 66, 66, 0.685);
+   
+      cursor: pointer;
+      overflow: hidden;
+      font-family: "Roboto";
+
 }
 
-.buttomChange .myStory .linkMyStory,.buttomChange .myWorks a{
+.myStory h3, .myWorks h3{
+    position: absolute;
+   
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    transition: all 0.4s cubic-bezier(0.875, 0.885, 0.32, 1)
+}
+
+.myStory:hover h3{
+    transform: translateX(300%)
+}
+
+.buttomChange .myStory .linkMyStory, .buttomChange .myWorks .linkMyWorks{
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-     font-size: 22px;
+    color: rgba(255, 255, 255, 0.5);
      text-decoration: none;
    z-index: 2;
-   color: rgba(240, 240, 240, 0.89);
-   font-weight: 600;
-  
-
-   
-
+       border-top: 1px solid transparent; 
+   transition: all 0.3s ease;
+    font-weight: 600;
+   font-size: 18px;
+   width: 100%;
+   height: 100%;
+   background: rgba(32, 32, 32, 0.733);
 }
 
-.linkMyStory:hover {
-   
- 
+.myStory:hover .linkMyStory{
+    transform: translateX(0%);
+    color: #fff;
+}
+
+.myStory .linkMyStory{
+   transform: translateX(-300%);
+}
+
+
+.myStory .linkMyStory:before, .myStory .linkMyStory:after, .myStory .linkMyStory span::before, .myStory .linkMyStory span::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background: var(--colorBorder);
+    transition: all 0.3s ease;
+    transition-delay: 0.4s;
+       box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.274);
+  
+}
+.myStory .linkMyStory:before{
+    bottom: 0;
+    left: 0;
+  
+}
+.myStory:hover .linkMyStory:before{
+    width: 100%;
+}
+
+ .myStory .linkMyStory:after{
+     top:0;
+     right: 0;
+  }
+
+.myStory:hover .linkMyStory:after{
+    width: 100%;
+} 
+
+.myStory .linkMyStory span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.myStory .linkMyStory span::before{
+   width: 5px;
+   height: 0;
+   right: 0;
+   bottom: 0;
+   transition-delay: 0s;
+}
+
+.myStory .linkMyStory:hover span::before{
+    height: 100%;
+}
+
+.myStory .linkMyStory span::after{
+    width: 5px;
+    height: 0;
+    left: 0;
+    top:0;
+    transition-delay: 0s;
+   }
+
+.myStory .linkMyStory:hover span::after{
+    height: 100%;
+}
+
+
+/*АНИМАЦИЯ МОИХ РАБОТ*/
+.myWorks:hover h3{
+    transform: translateX(-300%)
+}
+
+.myWorks:hover .linkMyWorks{
+    transform: translateX(0%);
+    color: #fff;
+}
+
+.myWorks .linkMyWorks{
+   transform: translateX(300%);
+}
+
+
+.myWorks .linkMyWorks:before, .myWorks .linkMyWorks:after, .myWorks .linkMyWorks span::before, .myWorks .linkMyWorks span::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    background: var(--colorBorder);
+    transition: all 0.3s ease;
+    transition-delay: 0.4s;
+    box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.274);
+  
+}
+.myWorks .linkMyWorks:before{
+    bottom: 0;
+    left: 0;
+    
+}
+.myWorks:hover .linkMyWorks:before{
+    width: 100%;
+}
+
+ .myWorks .linkMyWorks:after{
+     top:0;
+     right: 0;
+  }
+
+.myWorks:hover .linkMyWorks:after{
+    width: 100%;
+} 
+
+.myWorks .linkMyWorks span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.myWorks .linkMyWorks span::before{
+   width: 5px;
+   height: 0;
+   right: 0;
+   bottom: 0;
+   transition-delay: 0s;
+}
+
+.myWorks .linkMyWorks:hover span::before{
+    height: 100%;
+}
+
+.myWorks .linkMyWorks span::after{
+    width: 5px;
+    height: 0;
+    left: 0;
+    top:0;
+    transition-delay: 0s;
+   }
+
+.myWorks .linkMyWorks:hover span::after{
+    height: 100%;
 }
 
 
