@@ -4,25 +4,66 @@
     src: url('fonts/MullerNarrow-ExtraBold.ttf')
 }
 
-
-@media (max-width: 800px) {
-  body .Bg {
-    background-size: cover;
-  }
-  body .primer h1,
-  body .primer .showPrimer {
-    transition: all 0.4s;
-  }
-  body .showCont {
-    width: 95%;
-  }
-  body .showPrimer .showCont h3 {
-    font-size: 30px;
-  }
-  body .showPrimer p {
-    font-size: 44px;
-  }
+@media (max-width: 950px){
+    body .primer .sect1_cont{
+        width: 90%;
+    }
 }
+
+@media (max-width: 700px) {
+  body .container .Bg {
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+    height: 110vh;
+   
+  }
+  body .primer{
+      height: 110vh;
+  }
+  body .primer .sect1_cont{
+      width: 100%;
+ 
+  }
+
+  body .sect1_cont h1{
+      font-size: 54px;
+      min-width: 360px;
+      margin: 80px 0 0;
+      text-align: center;
+  }
+  body .buttomChange{
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      min-width: 360px;
+  }
+  body .buttomChange h3{
+    font-size: 18px;
+  }
+  
+  body .myStory, body .myWorks{
+      margin-bottom: 30px;
+      width: 90%;
+      height: 80px;
+      
+  }
+ body .buttomChange .myStory .linkMyStory{
+     font-size: 16px;
+ }
+
+}
+
+
+  @media (max-width: 500px){
+    body .primer .sect1_cont h1{
+        font-size: 44px;
+       
+      
+        
+    }
+  }
+
 
 body {
   padding: 0;
@@ -41,6 +82,7 @@ body {
 .container {
   min-width: 360px;
     z-index: 9;
+    width: 100%;
     position: absolute;
     
 }
@@ -65,10 +107,10 @@ background-size: contain;
  position: absolute;
   height: 100vh;
   width: 100%;
-  background: url(mountains.jpg) no-repeat;
-  background-size: 110%;
+  background: url(image/mountainsB.jpg) no-repeat;
+  background-size: 150%;
   background-position: center;
-   transition: all 4s cubic-bezier(0.2, 0.2, 0.2, 1);
+   transition: all 10s cubic-bezier(0.2, 0.2, 0.2, 1);
   box-sizing: border-box;
   background-position-x: var(--main-posX);
   background-position-y: var(--main-posY);
@@ -104,18 +146,17 @@ background-size: contain;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  display: flex;
   flex-flow:column nowrap;
 }
+
 .sect1_cont h1{
     font-size: 70px;
     font-weight: 600;
     width: 90%;
-    min-width: 550px;
+    min-width: 650px;
+    margin: 20px 0 0;
+    padding: 0;
    
-}
-.sect1_cont h1 span{
-font-size: 70px;
 }
 
 .buttomChange{
@@ -123,8 +164,8 @@ font-size: 70px;
     justify-content: space-around;
     align-items: flex-start;
     width: 90%;
-    margin: 30px  auto 0;
-    min-width: 550px;
+    margin: 80px  auto 0;
+    min-width: 650px;
     height: 400px;
 }
 
