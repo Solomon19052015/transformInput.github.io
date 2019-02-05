@@ -1,10 +1,23 @@
+(function(){
+
+    let load = document.createElement('div');
+    let kv = document.createElement('div');
+    document.body.insertBefore(load, document.body.firstChild);
+   load.insertBefore(kv, load.firstChild);
+    load.classList.add('load');
+    kv.classList.add('kv');
+   
+})();
+
 document.body.onload = function() {
-  setTimeout(function() {
-    let load = document.querySelector(".load");
-    let kv = document.querySelector(".kv");
-    load.classList.add("closeLoad");
-    kv.classList.add("kvClose");
-  }, 1500);
+  //ЛОАДЕР
+
+ setTimeout(function() {
+  let load= document.querySelector(".load");
+  let kv = document.querySelector(".kv");
+ load.classList.add("closeLoad");
+ kv.classList.add("kvClose");
+}, 1500);
 
   let primer = document.querySelector(".primer");
   let h = document.querySelector("h3");
@@ -24,7 +37,7 @@ document.body.onload = function() {
     mainPos.style.setProperty("--main-posX", comparX + "%");
     mainPos.style.setProperty("--main-posY", comparY + "%");
   }
-
+//ПРЕВРД ПИКСЕЛЕЙ В ПРОЦЕНТЫ
   function numbProc(x, y) {
     let xP = (x * 100) / window.innerWidth;
     let yP = (y * 100) / window.innerHeight;
@@ -32,6 +45,7 @@ document.body.onload = function() {
     return arr;
   }
 
+  //ЗОНЫ РЕАГИРОВАНИЯ НА ЭКРАНЕ
   function comparisonX(x) {
     let result = 0;
     if (x > 0 && x <= 25) {
@@ -66,3 +80,5 @@ document.body.onload = function() {
     }
   }
 };
+
+
