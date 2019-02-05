@@ -17,7 +17,7 @@ document.body.onload = function() {
   let kv = document.querySelector(".kv");
  load.classList.add("closeLoad");
  kv.classList.add("kvClose");
-}, 1500);
+}, 1000);
 
   let primer = document.querySelector(".primer");
   let h = document.querySelector("h3");
