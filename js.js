@@ -29,13 +29,13 @@ document.body.onload = function() {
     let x = e.clientX;
     let y = e.clientY;
     let funcPreobr = numbProc(x, y);
-    let a = Math.round(funcPreobr[0] * 1.1);
-    let b = Math.round(funcPreobr[1] * 1.1);
+    let a = Math.round(funcPreobr[0] );
+    let b = Math.round(funcPreobr[1]  );
     let comparX = comparisonX(a);
     let comparY = comparisonY(b);
     /*    h.innerHTML = a + " , " + b;  */
-    mainPos.style.setProperty("--main-posX", comparX + "%");
-    mainPos.style.setProperty("--main-posY", comparY + "%");
+    mainPos.style.setProperty("--main-posX",  comparX   + "%");
+    mainPos.style.setProperty("--main-posY",  comparY  + "%");
   }
 //ПРЕВРД ПИКСЕЛЕЙ В ПРОЦЕНТЫ
   function numbProc(x, y) {
@@ -49,10 +49,10 @@ document.body.onload = function() {
   function comparisonX(x) {
     let result = 0;
     if (x > 0 && x <= 25) {
-        return (result = 15);
+        return (result = 20);
       } 
     if (x > 25 && x <= 50) {
-        return (result = 40);
+        return (result = 45);
       } 
     if (x > 50 && x <= 75) {
       return (result = 70);
@@ -70,15 +70,15 @@ document.body.onload = function() {
       return (result = 20);
     } 
     if (x > 25 && x <=50) {
-      return (result = 40);
+      return (result = 45);
     } 
     if(x > 50 && x <=75) {
-      return (result = 60);
+      return (result = 70);
     }
     if(x>75){
         return (result = 80);
     }
-  }
+  } 
 };
 
 

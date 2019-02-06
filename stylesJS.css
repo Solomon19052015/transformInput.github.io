@@ -5,12 +5,15 @@
 }
 
 @media (max-width: 950px){
+    body .container .Bg{
+        background-size: 150%;
+    }
     body .primer .sect1_cont{
         width: 90%;
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   body .container .Bg {
     background-size: cover;
     background-position: center;
@@ -84,7 +87,7 @@ body {
 :root {
   --main-posX: 10%;
   --main-posY: 10%;
-  --colorBorder: rgba(255, 255, 255, 0.815);
+  --colorBorder: rgba(121, 121, 121, 0.014);
 }
 
 .container {
@@ -116,9 +119,9 @@ background-size: contain;
   height: 100vh;
   width: 100%;
   background: url(image/mountainsB.jpg) no-repeat;
-  background-size: 150%;
+  background-size: 120%;
   background-position: center;
-   transition: all 10s cubic-bezier(0.2, 0.2, 0.2, 1);
+   transition: all 5s cubic-bezier(0.2, 0.2, 0.2, 1);
   box-sizing: border-box;
   background-position-x: var(--main-posX);
   background-position-y: var(--main-posY);
@@ -180,13 +183,12 @@ background-size: contain;
  .myStory,.myWorks{
     position: relative;
     width: 300px;
-    height: 100px;
+    height: 150px;
     font-weight: 600;
    display: flex;
    justify-content: center;
    align-items: center;
-   background: rgba(66, 66, 66, 0.685);
-   
+   background: linear-gradient(to bottom, rgba(73, 73, 73, 0.541),rgba(61, 61, 61, 0));
       cursor: pointer;
       overflow: hidden;
       font-family: "Roboto";
@@ -219,7 +221,7 @@ background-size: contain;
    font-size: 18px;
    width: 100%;
    height: 100%;
-   background: rgba(32, 32, 32, 0.733);
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.541),rgba(53, 53, 53, 0.055));
 }
 
 .myStory:hover .linkMyStory{
@@ -232,36 +234,37 @@ background-size: contain;
 }
 
 
-.myStory .linkMyStory:before, .myStory .linkMyStory:after, .myStory .linkMyStory span::before, .myStory .linkMyStory span::after {
+.myStory .linkMyStory:before, .myStory .linkMyStory:after, .myStory .linkMyStory span::before, .myStory .linkMyStory span::after,
+.myWorks .linkMyWorks:before, .myWorks .linkMyWorks:after, .myWorks .linkMyWorks span::before, .myWorks .linkMyWorks span::after {
     content: '';
     position: absolute;
     width: 0%;
-    height: 5px;
+    height: 0px;
     background: var(--colorBorder);
     transition: all 0.3s ease;
-    transition-delay: 0.4s;
-       box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.274);
+    transition-delay: 0.2s;
+       box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.459);
   
 }
-.myStory .linkMyStory:before{
+.myStory .linkMyStory:before,.myWorks .linkMyWorks:before{
     bottom: 0;
     left: 0;
   
 }
-.myStory:hover .linkMyStory:before{
+.myStory:hover .linkMyStory:before,.myWorks:hover .linkMyWorks:after{
     width: 100%;
 }
 
- .myStory .linkMyStory:after{
+ .myStory .linkMyStory:after, .myWorks .linkMyWorks:after{
      top:0;
      right: 0;
   }
 
-.myStory:hover .linkMyStory:after{
+.myStory:hover .linkMyStory:after,.myWorks:hover .linkMyWorks:before{
     width: 100%;
 } 
 
-.myStory .linkMyStory span{
+.myStory .linkMyStory span,.myWorks .linkMyWorks span{
     display: block;
     position: absolute;
     width: 100%;
@@ -269,27 +272,27 @@ background-size: contain;
     z-index: 0;
 }
 
-.myStory .linkMyStory span::before{
-   width: 5px;
+.myStory .linkMyStory span::before,.myWorks .linkMyWorks span::before{
+   width: 0px;
    height: 0;
    right: 0;
    bottom: 0;
    transition-delay: 0s;
 }
 
-.myStory .linkMyStory:hover span::before{
+.myStory .linkMyStory:hover span::before,.myWorks .linkMyWorks:hover span::before{
     height: 100%;
 }
 
-.myStory .linkMyStory span::after{
-    width: 5px;
+.myStory .linkMyStory span::after,.myWorks .linkMyWorks span::after{
+    width: 0px;
     height: 0;
     left: 0;
     top:0;
     transition-delay: 0s;
    }
 
-.myStory .linkMyStory:hover span::after{
+.myStory .linkMyStory:hover span::after,.myWorks .linkMyWorks:hover span::after{
     height: 100%;
 }
 
@@ -308,67 +311,6 @@ background-size: contain;
    transform: translateX(300%);
 }
 
-
-.myWorks .linkMyWorks:before, .myWorks .linkMyWorks:after, .myWorks .linkMyWorks span::before, .myWorks .linkMyWorks span::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 5px;
-    background: var(--colorBorder);
-    transition: all 0.3s ease;
-    transition-delay: 0.4s;
-    box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.274);
-  
-}
-.myWorks .linkMyWorks:before{
-    bottom: 0;
-    left: 0;
-    
-}
-.myWorks:hover .linkMyWorks:before{
-    width: 100%;
-}
-
- .myWorks .linkMyWorks:after{
-     top:0;
-     right: 0;
-  }
-
-.myWorks:hover .linkMyWorks:after{
-    width: 100%;
-} 
-
-.myWorks .linkMyWorks span{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.myWorks .linkMyWorks span::before{
-   width: 5px;
-   height: 0;
-   right: 0;
-   bottom: 0;
-   transition-delay: 0s;
-}
-
-.myWorks .linkMyWorks:hover span::before{
-    height: 100%;
-}
-
-.myWorks .linkMyWorks span::after{
-    width: 5px;
-    height: 0;
-    left: 0;
-    top:0;
-    transition-delay: 0s;
-   }
-
-.myWorks .linkMyWorks:hover span::after{
-    height: 100%;
-}
 
 
 
