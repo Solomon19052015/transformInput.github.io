@@ -15,13 +15,15 @@
 document.body.onload = function() {
   //ЛОАДЕР
 
-/*   setTimeout(function() {
+   setTimeout(function() {
   let load= document.querySelector(".load");
   let kv = document.querySelector(".kv");
+  let h = document.querySelector(".load h2");
  load.classList.add("closeLoad");
  kv.classList.add("kvClose");
+ h.classList.add("closeH");
 }, 1000);
-  */
+  
   let primer = document.querySelector(".primer");
   let h = document.querySelector("h3");
   let mainPos = document.querySelector(":root");
