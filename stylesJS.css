@@ -445,39 +445,14 @@ background-size: contain;
     padding: 20px;
     border-radius: 2px;
     position: relative;
-    color: rgba(255, 255, 255, 0.253);
-    text-shadow: 0px 0px 5px rgba(233, 233, 233, 0.815);
-    -webkit-animation: hAnimat 0.8s ease 0s infinite alternate backwards;
-            animation: hAnimat 0.8s ease 0s infinite alternate backwards;
-         
-
-}
-
-@-webkit-keyframes hAnimat{
-    0%{
-        color: rgba(255, 255, 255, 0.253);
-          
-    }
-   
-    100%{
-        color: rgba(255, 255, 255, 0.61);
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 0px 0px 5px rgba(233, 233, 233, 0.411);
     
-    }
-}
 
-@keyframes hAnimat{
-    0%{
-        color: rgba(255, 255, 255, 0.253);
-    }
-   
-    100%{
-        color: rgba(255, 255, 255, 0.61);
-    }
 }
 
 
-
-.closeLoad {
+.closeLoad,.closeH {
   z-index: 0;
   background: rgba(0, 0, 0, 0);
   opacity: 0;
