@@ -439,10 +439,9 @@ background-size: contain;
 }
 
 .load h2{
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 100;
     text-align: center;
-
     padding: 20px;
     border-radius: 2px;
     position: relative;
