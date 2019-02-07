@@ -9,6 +9,8 @@
        display: none;
    }
    body .linkMyStoryMobile, body .linkMyWorksMobile{
+       display: -webkit-box;
+       display: -ms-flexbox;
        display: flex;
        width: 90%;
        height: 100px;
@@ -33,6 +35,7 @@
   body .container .Bg {
     background-size: cover;
     background-position: center;
+    -webkit-transition: all 0s ease;
     transition: all 0s ease;
     height: 110vh;
    
@@ -52,9 +55,16 @@
       text-align: center;
   }
   body .buttomChange{
-      flex-flow: column nowrap;
-      justify-content: center;
-      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       min-width: 360px;
   }
   body .buttomChange h3{
@@ -137,24 +147,37 @@ background-size: contain;
   background: url(image/mountainsB.jpg) no-repeat;
   background-size: 120%;
   background-position: center;
+   -webkit-transition: all 5s cubic-bezier(0.2, 0.2, 0.2, 1);
    transition: all 5s cubic-bezier(0.2, 0.2, 0.2, 1);
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-position-x: var(--main-posX);
   background-position-y: var(--main-posY);
   z-index: 9;
-  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+          filter: brightness(0.6);
   top:0
 }
 .primer{
     position: relative;
     height: 100vh;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   z-index: 10;
   top:0;
 }
@@ -170,10 +193,18 @@ background-size: contain;
   width: 70%;
   margin: 0 auto;
   z-index: 11;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-flow:column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient:vertical;
+  -webkit-box-direction:normal;
+      -ms-flex-flow:column nowrap;
+          flex-flow:column nowrap;
 }
 
 .sect1_cont h1{
@@ -187,9 +218,14 @@ background-size: contain;
 }
 
 .buttomChange{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 90%;
     margin: 80px  auto 0;
     min-width: 650px;
@@ -201,9 +237,16 @@ background-size: contain;
     width: 300px;
     height: 150px;
     font-weight: 600;
+   display: -webkit-box;
+   display: -ms-flexbox;
    display: flex;
-   justify-content: center;
-   align-items: center;
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+   background: -webkit-gradient(linear, left top, left bottom, from(rgba(73, 73, 73, 0.541)),to(rgba(61, 61, 61, 0)));
    background: linear-gradient(to bottom, rgba(73, 73, 73, 0.541),rgba(61, 61, 61, 0));
       cursor: pointer;
       overflow: hidden;
@@ -222,37 +265,49 @@ background-size: contain;
    
     font-size: 20px;
     color: rgb(255, 255, 255);
+    -webkit-transition: all 0.4s cubic-bezier(0.875, 0.885, 0.32, 1);
     transition: all 0.4s cubic-bezier(0.875, 0.885, 0.32, 1)
 }
 
 .myStory:hover h3{
-    transform: translateX(300%)
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%)
 }
 
 .buttomChange .myStory .linkMyStory, .buttomChange .myWorks .linkMyWorks{
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     color: rgba(255, 255, 255, 0.5);
      text-decoration: none;
    z-index: 2;
        border-top: 1px solid transparent; 
+   -webkit-transition: all 0.3s ease; 
    transition: all 0.3s ease;
     font-weight: 600;
    font-size: 18px;
    width: 100%;
    height: 100%;
+   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.541)),to(rgba(53, 53, 53, 0.055)));
    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.541),rgba(53, 53, 53, 0.055));
 }
 
 .myStory:hover .linkMyStory{
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
     color: #fff;
 }
 
 .myStory .linkMyStory{
-   transform: translateX(-300%);
+   -webkit-transform: translateX(-300%);
+           transform: translateX(-300%);
 }
 
 
@@ -263,9 +318,12 @@ background-size: contain;
     width: 0%;
     height: 0px;
     background: var(--colorBorder);
+    -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    transition-delay: 0.2s;
-       box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.459);
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+       -webkit-box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.459);
+               box-shadow: 0px 0px 50px 3px rgba(255, 255, 255, 0.459);
   
 }
 .myStory .linkMyStory:before,.myWorks .linkMyWorks:before{
@@ -299,7 +357,8 @@ background-size: contain;
    height: 0;
    right: 0;
    bottom: 0;
-   transition-delay: 0s;
+   -webkit-transition-delay: 0s;
+           transition-delay: 0s;
 }
 
 .myStory .linkMyStory:hover span::before,.myWorks .linkMyWorks:hover span::before{
@@ -311,7 +370,8 @@ background-size: contain;
     height: 0;
     left: 0;
     top:0;
-    transition-delay: 0s;
+    -webkit-transition-delay: 0s;
+            transition-delay: 0s;
    }
 
 .myStory .linkMyStory:hover span::after,.myWorks .linkMyWorks:hover span::after{
@@ -321,16 +381,19 @@ background-size: contain;
 
 /*АНИМАЦИЯ МОИХ РАБОТ*/
 .myWorks:hover h3{
-    transform: translateX(-300%)
+    -webkit-transform: translateX(-300%);
+            transform: translateX(-300%)
 }
 
 .myWorks:hover .linkMyWorks{
-    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
     color: #fff;
 }
 
 .myWorks .linkMyWorks{
-   transform: translateX(300%);
+   -webkit-transform: translateX(300%);
+           transform: translateX(300%);
 }
 
 
@@ -352,48 +415,74 @@ background-size: contain;
   height: 100vh;
   position: absolute;
   z-index: 99;
+  -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   background: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-flow: column nowrap;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   animation: loadB 0.8s ease 0.1s infinite alternate-reverse;
-  animation-fill-mode: forwards;
-  transform-origin: center;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
   
 }
 
-.load h1{
+.load h2{
     font-size: 44px;
     font-weight: 100;
     text-align: center;
-   width: 50%;
+
     padding: 20px;
     border-radius: 2px;
     position: relative;
-    color: rgb(219, 219, 219);
-   
-               
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    -webkit-animation: hAnimat 0.8s ease 0s infinite alternate backwards;
+            animation: hAnimat 0.8s ease 0s infinite alternate backwards;
+         
 
 }
-.load h1::before{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background: transparent;
-    box-shadow: 0px -8px 5px 1px #fff ;
+
+@-webkit-keyframes hAnimat{
+    0%{
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            text-shadow: 0px 0px 10px rgb(233, 233, 233);
+    }
+   
+    100%{
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        text-shadow: 0px 0px 15px rgb(233, 233, 233);
+    }
 }
-.load h1 span{
- font-size: 50px;
- color: #fff;
+
+@keyframes hAnimat{
+    0%{
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            text-shadow: 0px 0px 10px rgb(233, 233, 233);
+    }
+   
+    100%{
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        text-shadow: 0px 0px 15px rgb(233, 233, 233);
+    }
 }
+
+
 
 .closeLoad {
   z-index: 0;
@@ -405,35 +494,70 @@ background-size: contain;
   height: 40px;
   position: relative;
   margin: 0 auto;
-  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.342);
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.342);
+          box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.342);
   z-index: 101;
   background: #fff;
-  transform: translateX(0px) rotate(0deg);
-  animation: kvAfter 1s cubic-bezier(1, 1, 1, 1) 0s infinite alternate;
-  animation-fill-mode: backwards;
-  transform-origin: center;
+  -webkit-transform: translateX(0px) rotate(0deg);
+          transform: translateX(0px) rotate(0deg);
+  -webkit-animation: kvAfter 1s cubic-bezier(1, 1, 1, 1) 0s infinite alternate;
+          animation: kvAfter 1s cubic-bezier(1, 1, 1, 1) 0s infinite alternate;
+  -webkit-animation-fill-mode: backwards;
+          animation-fill-mode: backwards;
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 .kvClose {
   opacity: 0;
   z-index: 0;
 }
 
-@keyframes kvAfter {
+@-webkit-keyframes kvAfter {
   0% {
-    transform: translate(-100px) rotate(0deg);
+    -webkit-transform: translate(-100px) rotate(0deg);
+            transform: translate(-100px) rotate(0deg);
   }
 
   25% {
-    transform: translate(-50px) rotate(90deg);
+    -webkit-transform: translate(-50px) rotate(90deg);
+            transform: translate(-50px) rotate(90deg);
   }
   50% {
-    transform: translate(0px) rotate(180deg);
+    -webkit-transform: translate(0px) rotate(180deg);
+            transform: translate(0px) rotate(180deg);
   }
   75% {
-    transform: translate(50px) rotate(270deg);
+    -webkit-transform: translate(50px) rotate(270deg);
+            transform: translate(50px) rotate(270deg);
   }
 
   100% {
-    transform: translate(100px) rotate(360deg);
+    -webkit-transform: translate(100px) rotate(360deg);
+            transform: translate(100px) rotate(360deg);
+  }
+}
+
+@keyframes kvAfter {
+  0% {
+    -webkit-transform: translate(-100px) rotate(0deg);
+            transform: translate(-100px) rotate(0deg);
+  }
+
+  25% {
+    -webkit-transform: translate(-50px) rotate(90deg);
+            transform: translate(-50px) rotate(90deg);
+  }
+  50% {
+    -webkit-transform: translate(0px) rotate(180deg);
+            transform: translate(0px) rotate(180deg);
+  }
+  75% {
+    -webkit-transform: translate(50px) rotate(270deg);
+            transform: translate(50px) rotate(270deg);
+  }
+
+  100% {
+    -webkit-transform: translate(100px) rotate(360deg);
+            transform: translate(100px) rotate(360deg);
   }
 }

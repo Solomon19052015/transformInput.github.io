@@ -2,8 +2,11 @@
 
     let load = document.createElement('div');
     let kv = document.createElement('div');
+    let h = document.createElement('h2');
+    h.innerHTML = "ЗАГРУЗКА";
     document.body.insertBefore(load, document.body.firstChild);
    load.insertBefore(kv, load.firstChild);
+   load.insertBefore(h, load.firstChild);
     load.classList.add('load');
     kv.classList.add('kv');
    
@@ -12,13 +15,13 @@
 document.body.onload = function() {
   //ЛОАДЕР
 
- setTimeout(function() {
+/*  setTimeout(function() {
   let load= document.querySelector(".load");
   let kv = document.querySelector(".kv");
  load.classList.add("closeLoad");
  kv.classList.add("kvClose");
 }, 1000);
-
+ */
   let primer = document.querySelector(".primer");
   let h = document.querySelector("h3");
   let mainPos = document.querySelector(":root");
