@@ -20,6 +20,12 @@
    body .linkMyStoryMobile{
        margin-bottom: 20px;
    }
+ 
+   body .bgShak{
+       animation-name: shakingMobile
+   }
+
+
 }
 
 @media (max-width: 950px){
@@ -33,7 +39,7 @@
 
 @media (max-width: 750px) {
   body .container .Bg {
-    background-size: cover;
+    background-size: 450%;
     background-position: center;
     -webkit-transition: all 0s ease;
     transition: all 0s ease;
@@ -115,6 +121,12 @@ body {
   --main-posY: 10%;
   --colorBorder: rgba(121, 121, 121, 0.014);
 }
+.content{
+    width: 100%;
+    height: 100vh;
+
+}
+
 
 .container {
   min-width: 360px;
@@ -123,6 +135,7 @@ body {
     position: absolute;
     
 }
+
 
 .container2{
     z-index: 11;
@@ -138,7 +151,12 @@ background-size: contain;
     margin: 0;
   
 }
-
+.container .hi .symb{
+    display: inline-block;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0.1s;
+    min-width: 10px;
+}
 
 .container .Bg {
  position: absolute;
@@ -156,8 +174,57 @@ background-size: contain;
   z-index: 9;
   -webkit-filter: brightness(0.6);
           filter: brightness(0.6);
-  top:0
+  top:0;
+ 
+  
 }
+.bgShak{
+    animation: shaking 0.4s cubic-bezier(0.75, 1, 1, 1) 0s 1 alternate;
+}
+
+@keyframes shaking{
+0%{
+  background-size: 120%;
+}
+20%{
+    background-size: 123%;
+}
+40%{
+    background-size: 118%;
+}
+60%{
+    background-size: 125%;
+}
+80%{
+    background-size: 115%;
+}
+100%{
+    background-size: 120%;
+}
+}
+
+@keyframes shakingMobile{
+    0%{
+      background-size: 450%;
+    }
+    20%{
+        background-size: 463%;
+    }
+    40%{
+        background-size: 458%;
+    }
+    60%{
+        background-size: 445%;
+    }
+    80%{
+        background-size: 470%;
+    }
+    100%{
+        background-size: 450%;
+    }
+    }
+
+
 .primer{
     position: relative;
     height: 100vh;
@@ -310,9 +377,9 @@ background-size: contain;
            transform: translateX(-300%);
 }
 
-
-.myStory .linkMyStory:before, .myStory .linkMyStory:after, .myStory .linkMyStory span::before, .myStory .linkMyStory span::after,
-.myWorks .linkMyWorks:before, .myWorks .linkMyWorks:after, .myWorks .linkMyWorks span::before, .myWorks .linkMyWorks span::after {
+/* 
+.myStory .linkMyStory:before, */ .myStory .linkMyStory:after, .myStory .linkMyStory span::before, .myStory .linkMyStory span::after,
+/* .myWorks .linkMyWorks:before, */ .myWorks .linkMyWorks:after, .myWorks .linkMyWorks span::before, .myWorks .linkMyWorks span::after {
     content: '';
     position: absolute;
     width: 0%;
