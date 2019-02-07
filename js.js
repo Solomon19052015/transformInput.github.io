@@ -1,4 +1,4 @@
-(function(){
+(function(func){
 
     let load = document.createElement('div');
     let kv = document.createElement('div');
@@ -9,9 +9,10 @@
    load.insertBefore(h, load.firstChild);
     load.classList.add('load');
     kv.classList.add('kv');
-   
-})();
+    func()
+})(onloadDoc);
 
+function onloadDoc(){
 document.body.onload = function() {
   //ЛОАДЕР
 
@@ -85,5 +86,5 @@ document.body.onload = function() {
     }
   } 
 };
-
+}
 
