@@ -154,21 +154,22 @@ function onloadDoc() {
         let spanH = document.querySelectorAll(".hi span");
         setTimeout(function() {
           for (let i = 0; i < contTextResultLenght; i++) {
-            console.log(spanH[i]);
-            rotat(spanH[i]);
-            goDownEffect(spanH[i]);
+              goDownEffect(spanH[i]);
+                rotat(spanH[i]); 
           }
         }, 0);
       }
 
       function rotateEffect(el) {
         count++;
-        if (count / 2) {
-          let random = Math.floor(Math.random() * 70);
+        console.log(count);
+        if (count%2 == 0) {
+          let random = Math.floor(Math.random() * 30);
           el.style.transform = "rotate(" + random + "deg)";
         } else {
-          let random = Math.floor(Math.random() * -70);
+          let random = Math.floor(Math.random() * -30);
           el.style.transform = "rotate(" + random + "deg)";
+         
         }
       }
 
